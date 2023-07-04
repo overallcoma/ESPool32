@@ -40,8 +40,8 @@ class phmeter():
             ph_config = load_config(ph)
             _neutralVoltage = float(ph_config["neutral"])
             _acidVoltage = float(ph_config["acid"])
-        except :
-            print("phdata.txt ERROR ! Please run phmeter.reset()")
+        except Exception as e:
+            print(e)            
             sys.exit(1)
             
             
@@ -51,21 +51,6 @@ class phmeter():
         _phValue = slope*(float(voltage)-1500.0)/3.0+intercept
         round(_phValue,2)
         return _phValue  
- 
-    
-    def calibration(self,voltage):
-        if (voltage>1322 and voltage<1678):
-            print(">>>Buffer Solution:7.0")
-            save_voltage("neutral", voltage)
-            print(">>>PH:7.0 Calibration completed,Please enter Ctrl+C exit calibration in 5 seconds")
-            time.sleep(5.0)
-        elif (voltage>1854 and voltage<2210):
-            print(">>>Buffer Solution:4.0")
-            save_voltage("acid", voltage)
-            print(">>>PH:4.0 Calibration completed,Please enter Ctrl+C exit calibration in 5 seconds")
-            time.sleep(5.0)
-        else:
-            print(">>>Buffer Solution Error Try Again<<<")
             
             
     def reset(self):

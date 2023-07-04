@@ -32,7 +32,7 @@ class orp_meter():
         try:
             orp_config = load_config(orp)
         except :
-            print("config.json ERROR ! Please run smpl-ph-meter.reset()")
+            print("config.json ERROR ! Please run orpmeter.reset()")
             sys.exit(1)
             
     def read_orp(self, voltage)
