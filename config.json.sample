@@ -1,0 +1,47 @@
+{
+    "ph": {
+        "pin": 36,
+        "acid": 1469,
+        "neutral": 1053,
+        "display": true
+    },
+    "orp": {
+        "pin": 34,
+        "offset": -1710
+    },
+    "temperature": {
+        "pin": 32,
+        "display": true
+    },
+    "tds": {
+        "pin": 33
+    },
+    "network": {
+        "type": "wifi",
+        "ssid": "myssid",
+        "password": "wifipassword",
+        "reboot": true,
+        "debug": false
+    },
+    "mqtt": {
+        "server": "192.168.1.1",
+        "port": 1883,
+        "user": "espool32",
+        "password": "espool32",
+        "topic": "espool32",
+        "response_time": 10,
+        "keepalive": 600,
+        "ssl": false,
+        "ssl_params": " ",
+        "clean": true,
+        "will": "So long and thanks for all the fish",
+        "subs_cb": " ",
+        "wifi_coro": " ",
+        "connect_coro": " ",
+        "sock_cb": " ",
+        "listen_interval": 0,
+        "conn_timeout": 0,
+        "debug": false
+        }
+}
+
